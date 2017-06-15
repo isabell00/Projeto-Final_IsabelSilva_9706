@@ -87,6 +87,27 @@ add_action( 'wp_enqueue_scripts', 'theme_add_bootstrap' );
 
 
 
+
+function auto_featured_image() {
+    global $post;
+ 
+    if (!has_post_thumbnail($post->ID)) {
+        $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
+         
+      if ($attached_image) {
+              foreach ($attached_image as $attachment_id => $attachment) {
+                   set_post_thumbnail($post->ID, $attachment_id);
+              }
+         }
+    }
+}
+
+
+
+
+
+
+
 require get_template_directory() . '/inc/template-tags.php';
 
 

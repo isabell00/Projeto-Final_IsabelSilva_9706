@@ -93,42 +93,42 @@ get_header(); ?>
         </div>
         <div class="container">  
             <div class="col-md-4 col-sm-6 col-xs-12 galeria delay-05s animated zoomIn">
-                <img src="images/4.jpg" alt="infographics" title="infographics" class="img-responsive">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/4.jpg" alt="infographics" title="infographics" class="img-responsive">
                 <div class="description">
                   <p>INFOGRAPHICS</p> 
                   <a href="" class="viewBTN">VIEW PROJECT</a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 galeria delay-05s animated zoomIn">
-                <img src="images/2.jpg" alt="website" title="website" class="img-responsive">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/2.jpg" alt="website" title="website" class="img-responsive">
                 <div class="description">
                   <p>WEBSITE</p> 
                   <a href="" class="viewBTN">VIEW PROJECT</a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 galeria delay-05s animated zoomIn">
-                <img src="images/3.jpg" alt="editorial" title="editorial" class="img-responsive">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/3.jpg" alt="editorial" title="editorial" class="img-responsive">
                 <div class="description">
                   <p>EDITORIAL</p> 
                   <a href="" class="viewBTN">VIEW PROJECT</a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 galeria delay-05s animated zoomIn">
-                <img src="images/1.jpg" alt="vector drawing" title="vector drawing" class="img-responsive">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/1.jpg" alt="vector drawing" title="vector drawing" class="img-responsive">
                 <div class="description">
                   <p>VECTOR DRAWING</p> 
                   <a href="" class="viewBTN">VIEW PROJECT</a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 galeria delay-05s animated zoomIn">
-                <img src="images/5.jpg" alt="illustration" title="illustration" class="img-responsive">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/5.jpg" alt="illustration" title="illustration" class="img-responsive">
                 <div class="description">
                   <p>ILLUSTRATION</p> 
                   <a href="" class="viewBTN">VIEW PROJECT</a>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 galeria delay-05s animated zoomIn">
-                <img src="images/6.jpg" alt="illustration" title="illustration" class="img-responsive">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/6.jpg" alt="illustration" title="illustration" class="img-responsive">
                 <div class="description">
                   <p>ILLUSTRATION</p> 
                   <a href="" class="viewBTN">VIEW PROJECT</a>
@@ -195,7 +195,65 @@ get_header(); ?>
       </div>
     </div>
   </section>
+
     
+        
+        
+        
+        <!-- POST -->   
+      
+      <div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<?php
+		if ( have_posts() ) :
+
+			if ( is_home() && ! is_front_page() ) : ?>
+				
+
+			<?php
+			endif;
+
+			/* Start the Loop */
+			while ( have_posts() ) : the_post(); ?>
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<h2 class="entry-title">
+					<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title(); ?>
+					
+					<?php if ( has_post_thumbnail() ) { the_post_thumbnail();
+                    
+                    } else { ?>
+					<img src="<?php bloginfo('template_directory'); ?>/images/default-image.jpg" alt="<?php the_title(); ?>" />
+					<?php } ?>
+					</a>
+					</h2>
+					
+				</header><!-- .entry-header -->
+
+			</article><!-- #post-## -->
+
+			<?php endwhile;
+
+		endif; ?>           
+                       
+                             
+                                         
+           
+           
+           
+           
+           
+           
+           
+            
+                
+                    
+                        
+                            
+                                
+                                        
     
  <!-- Footer -->
      
@@ -204,11 +262,11 @@ get_header(); ?>
                <div class="social-icons">
                
                 <a href="#">
-                <img src="images/facebook1.png" width="40" height="40" alt="" onmouseover="src='images/facebook2.png'" onmouseout="src='images/facebook1.png'">
+                <img src="<?php bloginfo('stylesheet_directory')?>/images/facebook1.png" width="40" height="40" alt="" onmouseover="src='<?php bloginfo('stylesheet_directory')?>/images/facebook2.png'" onmouseout="src='<?php bloginfo('stylesheet_directory')?>/images/facebook1.png'">
                 </a>
-                <a href="#"><img src="images/instagram1.png" alt="" onmouseover="src='images/instagram2.png'" onmouseout="src='images/instagram1.png'">
+                <a href="#"><img src="<?php bloginfo('stylesheet_directory')?>/images/instagram1.png" alt="" onmouseover="src='<?php bloginfo('stylesheet_directory')?>/images/instagram2.png'" onmouseout="src='<?php bloginfo('stylesheet_directory')?>/images/instagram1.png'">
                 </a>
-                <a href="#"><img src="images/behance1.png" alt="" onmouseover="src='images/behance2.png'" onmouseout="src='images/behance1.png'">
+                <a href="#"><img src="<?php bloginfo('stylesheet_directory')?>/images/behance1.png" alt="" onmouseover="src='<?php bloginfo('stylesheet_directory')?>/images/behance2.png'" onmouseout="src='<?php bloginfo('stylesheet_directory')?>/images/behance1.png'">
                 </a>
                 </div>
           </div>
@@ -238,7 +296,22 @@ get_header(); ?>
         </div> 
                
                
-                
+              
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+                                 
+                                               
+                                  
+                                                 
+                                                                
+                                                                               
+                                                                                              
+                                                                                                             
+                                                                                                                            
+                                                                                                                                           
+                                                                                                                                                          
+                                                                                                                                                                                        
                 
 	</div><!-- #primary -->
 

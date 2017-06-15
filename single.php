@@ -11,11 +11,12 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
 
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>">
 			<header class="entry-header">
 				<?php
 				if ( is_single() ) :
@@ -24,13 +25,12 @@ get_header(); ?>
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
 
-				if ( 'post' === get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php wp_theme_posted_on(); ?>
-				</div><!-- .entry-meta -->
-				<?php
-				endif; ?>
+				
+				 ?>
+				 
+				 
 			</header><!-- .entry-header -->
+			
 
 			<div class="entry-content">
 				<?php the_content(); ?>
@@ -38,14 +38,19 @@ get_header(); ?>
 
 		</article><!-- #post-## -->
 
-			<?php the_post_navigation();
+			<?php;
 
 		endwhile; // End of the loop.
 		?>
+		
+            <div class="button-content">
+			    <button type="button" onclick="history.back();">• Go Back</button>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
 <?php
-get_sidebar();
+
 get_footer();

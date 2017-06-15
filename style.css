@@ -459,16 +459,11 @@ p {
 /*---------- ABOUT ----------*/
 .intro {
     background-color: #f8f7f7;
-    height: 70%;
+    height: 60%;
     padding-bottom: 30px;
-    text-align: center;
 }
-
-.wp1{
-    padding-top: 100px;
-}
-
 h1.text1 { 
+    margin-top: 90px;
     font-size: 30px; 
     font-family: 'Montserrat';
     text-transform: uppercase;
@@ -483,17 +478,11 @@ h1.text1 {
 }
 
 .intro p { 
-    width: 70%;
     margin: 50px 0 0; 
     color: #474749; 
-    font-size: 20px; 
+    font-size: 18px; 
     font-family: 'Montserrat';
     font-weight: 100;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    word-spacing: 2px;
-    
 }
 
 
@@ -619,7 +608,7 @@ h1.text1 {
 /*---------- BARRA ----------*/
 
 #cta{
-	background-image: url(../images/background4.jpg);
+	background-image: url(images/background4.jpg);
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover; 
@@ -698,6 +687,74 @@ section#contact{
     background: #474749;
 	color: #ffffff;
 }
+
+
+
+
+
+
+
+/*---------- Post ----------*/
+
+
+button{
+    color: #474749;
+    margin-top: 60px;
+    background-color: none;
+    border-style: 1px solid #000000;
+    
+}
+
+button:hover{
+    color: #ffffff;
+    background-color: #DBC2D8;
+    border: none;
+}
+
+.content-area{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+.site-main{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.entry-content p{
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.entry-header{
+    border: 1px solid #CBCCCB;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-header:hover {
+    border: 1px solid #DBC2D8;
+}
+
+.entry-title a {
+    text-align: center;
+}
+
+.post {
+    padding: 0 6px;
+    float: left;
+    width: 32.99999%;
+}
+
+
+
 
 
 
@@ -792,6 +849,20 @@ section#contact{
 
 /*---------- Responsive Styles ----------*/
 
+@media only screen and (max-width: 700px){
+    .post {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .post {
+        width: 100%;
+    }
+}
+
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .hamburguer {
         margin-left: 150px;
@@ -820,10 +891,9 @@ section#contact{
         padding-top: 50px;
     }
    
-    
+    .container .description {
+        width: 387px;
+        height: 258px;
+    }
 }
-
-
-
-
 
